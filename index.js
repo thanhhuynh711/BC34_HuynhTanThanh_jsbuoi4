@@ -58,30 +58,34 @@ document.getElementById("chonThanhVien").onclick = function () {
 // Bài tập 3
 document.getElementById("kiemTraSo").onclick = function () {
   // Đầu vào
-  var number1 = document.getElementById("number1").value;
-  var number2 = document.getElementById("number2").value;
-  var number3 = document.getElementById("number3").value;
+  var number1 = document.getElementById("number1").value * 1;
+  var number2 = document.getElementById("number2").value * 1;
+  var number3 = document.getElementById("number3").value * 1;
   //   Xử lý
-  var tongSo = 0;
-  if (number1 % 2 === 0) {
-    tongSo = "số chẵn";
+  var soChan = 0;
+  var soLe = 0;
+
+  if (number1 % 2 == 0) {
+    soChan++;
   } else {
-    tongSo = "số lẻ";
+    soLe++;
   }
-  if (number2 % 2 === 0) {
-    tongSo = "số chẵn";
+
+  if (number2 % 2 == 0) {
+    soChan++;
   } else {
-    tongSo = "số lẻ";
+    soLe++;
   }
-  if (number3 % 2 === 0) {
-    tongSo = "số chẵn";
+
+  if (number3 % 2 == 0) {
+    soChan++;
   } else {
-    tongSo = "số lẻ";
+    soLe++;
   }
-  var sothuc;
+  var dauRa = "Có " + soChan + " số chẵn" + ", " + "và " + soLe + " số lẻ";
 
   // Đầu ra
-  document.getElementById("ketQua2").innerHTML = sothuc;
+  document.getElementById("ketQua2").innerHTML = dauRa;
 };
 
 // Bài tập 4
